@@ -8,13 +8,41 @@
     <title>Tip-Calculator</title>
 </head>
 <body>
-    <input type="text" name="billAmount" placeholder="Enter Total Bill Amount"><br>
-    
-    <input type="radio" name="30%" value="30">
-    <label for="30">Outstanding-30%</label><br>
-    <input type="radio">
-    <input type="radio">
-    <input type="radio">
+    <p id="pid">Hello</p>
+    <label for="totalBill">Bill Amount</label>
+    <input type="number" id="totalBill" name="billAmount" size="5" min="0"><br><br>
+    <label for="persNr">Number of person:</label>
+    <select name="persNr" id="persNr">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7" selected>7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+    <hr class="hr00">
+    <input type="radio" id="sl1" name="stage" value="30">
+    <label for="sl1">Outstanding-30%</label>
+    <hr class="hr00">
+    <input type="radio" id="sl2" name="stage" value="20" checked>
+    <label for="sl2">Good-20%</label>
+    <hr class="hr00">
+    <input type="radio" id="sl3" name="stage" value="15">
+    <label for="sl3">OKish-15%</label>
+    <hr class="hr00">
+    <input type="radio" id="sl4" name="stage" value="10">
+    <label for="sl4">Bad - 10%</label>
+    <hr class="hr00">
+    <input type="radio" id="sl5" name="stage" value="0">
+    <label for="sl5">Never coming back-0%</label><br>
+    <hr class="hr00"><br>
+    <input type="submit" id="submit" value="Calculate"> <output id="out">25</output>
+    <p id="da"></p>
+
     <script src="./main.js"></script>
 </body>
 </html>
