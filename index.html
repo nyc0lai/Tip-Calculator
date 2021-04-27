@@ -8,40 +8,47 @@
     <title>Tip-Calculator</title>
 </head>
 <body>
-    <p id="pid">Hello</p>
-    <label for="totalBill">Bill Amount</label>
-    <input type="number" id="totalBill" name="billAmount" size="5" min="0"><br><br>
+    <div id="container">
+<!--Bill Amount input-->
+    <label for="totalBill">Bill Amount:</label>
+    <input type="number" id="totalBill" name="billAmount" min="0" required> $<br><br>
+<!--Number of Person input-->
     <label for="persNr">Number of person:</label>
     <select name="persNr" id="persNr">
         <option value="1">1</option>
-        <option value="2">2</option>
+        <option value="2" selected>2</option>
         <option value="3">3</option>
         <option value="4">4</option>
         <option value="5">5</option>
         <option value="6">6</option>
-        <option value="7" selected>7</option>
+        <option value="7">7</option>
         <option value="8">8</option>
         <option value="9">9</option>
         <option value="10">10</option>
     </select>
     <hr class="hr00">
-    <input type="radio" id="sl1" name="stage" value="30">
+<!--Service Level radio input-->
+    <input type="radio" id="sl1" name="stage" value="0.3">
     <label for="sl1">Outstanding-30%</label>
     <hr class="hr00">
-    <input type="radio" id="sl2" name="stage" value="20" checked>
+    <input type="radio" id="sl2" name="stage" value="0.2" checked>
     <label for="sl2">Good-20%</label>
     <hr class="hr00">
-    <input type="radio" id="sl3" name="stage" value="15">
+    <input type="radio" id="sl3" name="stage" value="0.15">
     <label for="sl3">OKish-15%</label>
     <hr class="hr00">
-    <input type="radio" id="sl4" name="stage" value="10">
+    <input type="radio" id="sl4" name="stage" value="0.1">
     <label for="sl4">Bad - 10%</label>
     <hr class="hr00">
     <input type="radio" id="sl5" name="stage" value="0">
     <label for="sl5">Never coming back-0%</label><br>
     <hr class="hr00"><br>
-    <input type="submit" id="submit" value="Calculate"> <output id="out">25</output>
-    <p id="da"></p>
+    <!--Button Calculate-->
+        <button id="calcul" >Calculate</button>
+        <div id="div-out">
+            <output id="out">$00.00</output>
+        </div>
+</div>
 
     <script src="./main.js"></script>
 </body>

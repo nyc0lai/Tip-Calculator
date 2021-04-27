@@ -1,14 +1,13 @@
-let TotalBillAmount = document.getElementById("totalBill").innerHTML;
+const TotalBillAmount = document.getElementById("totalBill");
 const ServiceLevel = document.getElementsByName("stage");
-const NumberOfPersons = document.getElementById("persNr").v;
-let x = document.getElementById("pid");
+const NumberOfPersons = document.getElementById("persNr");
 
-document.getElementById("da").innerHTML = ServiceLevel;
+document.getElementById("calcul").addEventListener("click", tipCalculator);
 
-
-document.getElementById("submit").addEventListener("click", calculate);
-
-function calculate() {
-    document.getElementById("out").innerHTML = (TotalBillAmount * ServiceLevel)/NumberOfPersons;
-}
+function tipCalculator() {
+    for(let i=0; i < ServiceLevel.length; i++){
+    if(ServiceLevel[i].checked)
+    document.getElementById("out").innerHTML = "$"+((TotalBillAmount.value * ServiceLevel[i].value)/NumberOfPersons.value).toFixed(2);
+    }
+};
 
